@@ -1,5 +1,5 @@
 grab-site
-===
+=========
 
 [![Build status][travis-image]][travis-url]
 
@@ -109,6 +109,11 @@ grab-site was removed from nixpkgs master; 23.05 is the last release to contain 
 nix-env -f https://github.com/NixOS/nixpkgs/archive/release-23.05.tar.gz -iA grab-site
 ```
 
+or, if you are using profiles (ie when you have flakes enabled):
+
+```
+nix profile install nixpkgs/release-22.11#grab-site
+```
 
 
 Install on another distribution lacking Python 3.7.x or 3.8.x
@@ -664,7 +669,7 @@ You will probably have to add ignores with translated `Special:*` URLs based on
 
 Forums require more manual intervention with ignore patterns.
 [`--igsets=forums`](https://github.com/ArchiveTeam/grab-site/blob/master/libgrabsite/ignore_sets/forums)
-is often useful for non-SMF forums, but you will have to add other ignore
+is often useful for most forums, but you will have to add other ignore
 patterns, including one to ignore individual-forum-post pages if there are
 too many posts to crawl.  (Generally, crawling the thread pages is enough.)
 
