@@ -1,5 +1,5 @@
 ARG PYTHON_VERSION=3.8
-ARG ALPINE_VERSION=3.16
+ARG ALPINE_VERSION=3.20
 
 FROM python:${PYTHON_VERSION}-alpine${ALPINE_VERSION}
 
@@ -28,7 +28,7 @@ RUN apk add --no-cache \
 		musl-dev \
 		libxslt-dev \
 		g++ \
-		re2-dev \
+		py3-pybind11-dev abseil-cpp-dev re2-dev \
 		libffi-dev \
 		openssl-dev \
 		patch \
